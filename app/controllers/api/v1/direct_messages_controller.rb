@@ -12,7 +12,7 @@ class Api::V1::DirectMessagesController < Api::V1::BaseController
       current: current_user.id, other: user.id
     ).order(:created_at)
 
-    render json: messages
+    render json: messages, include: { sender: { only: [ :id, :username, :email ] } }
   end
 
   def create
