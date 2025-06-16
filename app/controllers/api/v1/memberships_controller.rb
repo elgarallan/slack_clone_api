@@ -1,4 +1,4 @@
-class Api::V1::MembershipsController < BaseController
+class Api::V1::MembershipsController < Api::V1::BaseController
   def create
     team = current_user.teams.find_by(id: params[:team_id])
     user = User.find_by(email: params[:email])
