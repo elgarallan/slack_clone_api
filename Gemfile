@@ -48,6 +48,6 @@ end
 
 gem "devise", "~> 4.9"
 
-gem "jwt", "~> 2.10"
+gem "jwt", "~> 3.1"
 
 gem "rack-cors"
